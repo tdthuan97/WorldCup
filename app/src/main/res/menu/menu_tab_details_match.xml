@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_statistics"
+        android:title="STATISTICS"
+
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/navigation_liveevents"
+
+        android:title="LIVE EVENTS"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/navigation_facts"
+
+        android:title="FACTS"
+        app:showAsAction="always"/>
+
+</menu>

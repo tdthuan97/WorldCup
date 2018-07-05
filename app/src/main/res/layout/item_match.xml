@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:id="@+id/match"
+        android:weightSum="3">
+        <LinearLayout
+            android:id="@+id/resultNoPen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:weightSum="14"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/hometeam"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:gravity="left|center"
+                android:paddingStart="10dp"
+                android:text="Spain" />
+
+            <ImageView
+                android:id="@+id/imghome"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2"
+                android:src="@drawable/spain" />
+
+            <TextView
+                android:id="@+id/resultmatch"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text=" - "
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgaway"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2"
+                android:src="@drawable/portugal" />
+
+            <TextView
+                android:id="@+id/awayteam"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:gravity="right|center"
+                android:paddingRight="10dp"
+                android:text="Portugal" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/resultPen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Uruquay PSO (3 - 4)"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:paddingBottom="5dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="stage_result">
+        <item>First stage</item>
+        <item>Round of 16</item>
+        <item>Quarter-finals</item>
+        <item>Semi-finals</item>
+        <item>Play-off for third place</item>
+        <item>Final</item>
+
+    </string-array>
+</resources>
