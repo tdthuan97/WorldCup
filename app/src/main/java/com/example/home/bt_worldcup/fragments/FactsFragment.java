@@ -59,7 +59,8 @@ public class FactsFragment extends Fragment {
 
         txtStadium.setText(m.getLocation());
         txtCity.setText(m.getVenue());
-        txtAtten.setText(m.getAttendance());
+        if(m.getStatus().equals("completed"))
+            txtAtten.setText(m.getAttendance());
         txtCondi.setText(weather.getDescription());
         txtTemper.setText(weather.getTempCelsius()+"℃");
         txtHumidity.setText(weather.getHumidity()+"%");

@@ -3,6 +3,7 @@ package com.example.home.bt_worldcup.adapters;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -81,7 +82,7 @@ public class AMatchAdapter extends BaseAdapter{
             return i;
         }
         public class ViewHolder{
-        public TextView home,away,result,resultPen;
+        public TextView home,away,result,resultPen,timeMatch;
         public ImageView imghome,imgaway;
         LinearLayout resultNoPen,match;
 
@@ -102,6 +103,7 @@ public class AMatchAdapter extends BaseAdapter{
                 viewHolder.result = view.findViewById(R.id.resultmatch);
                 viewHolder.resultPen = view.findViewById(R.id.resultPen);
                 viewHolder.resultNoPen = view.findViewById(R.id.resultNoPen);
+                viewHolder.timeMatch = view.findViewById(R.id.timeMatch);
                 viewHolder.match = view.findViewById(R.id.match);
                 view.setTag(viewHolder);
             } else {
@@ -154,6 +156,11 @@ public class AMatchAdapter extends BaseAdapter{
                             viewHolder.result.setBackgroundResource(R.drawable.border_result_completed);
                         }
                         if(m.getStatus().equals("in progress")) {
+                            viewHolder.resultNoPen.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                                    0,2f));
+                            viewHolder.timeMatch.setVisibility(View.VISIBLE);
+                            viewHolder.timeMatch.setText(m.getTime().toString()+"'");
+                            viewHolder.result.setTextColor(Color.parseColor("#ffffff"));
                             viewHolder.result.setBackgroundResource(R.drawable.border_result_onprogess);
                         }
 

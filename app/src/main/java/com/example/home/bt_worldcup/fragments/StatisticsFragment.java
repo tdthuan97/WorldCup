@@ -12,17 +12,11 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.akaita.android.circularseekbar.CircularSeekBar;
+
 import com.example.home.bt_worldcup.R;
 import com.example.home.bt_worldcup.models.Match;
 import com.example.home.bt_worldcup.models.TeamStatistics;
 import com.example.home.bt_worldcup.models.TeamsInMatch;
-import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.PieData;
-import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.utils.ColorTemplate;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +27,7 @@ import java.util.Map;
 public class StatisticsFragment extends Fragment {
     View v;
     TextView txtBallProHome, txtBallProAway, txtFoulsHome, txtFoulsAway, txtYellowHome, txtYellowAway, txtRedHome, txtRedAway;
-    PieChart pieChart;
+
     LinearLayout statistics;
     TeamStatistics homeSta = null ,awaySta = null;
     public StatisticsFragment() {
@@ -60,21 +54,6 @@ public class StatisticsFragment extends Fragment {
     }
     @RequiresApi(api = Build.VERSION_CODES.O)
     private  void setData(){
-        List<Entry> prossessions = new ArrayList<>();
-        prossessions.add(new Entry(homeSta.getBallPossession(),0));
-        prossessions.add(new Entry(awaySta.getBallPossession(),1));
-        PieDataSet dataSet = new PieDataSet(prossessions,null);
-        ArrayList<String> xVals = new ArrayList<String>();
-        xVals.add("");
-        xVals.add("");
-        PieData data = new PieData(xVals, dataSet);
-        dataSet.setColors(new int[]{R.color.colorPrimary,R.color.cardview_shadow_start_color},getActivity());
-        pieChart.setDrawSliceText(false);
-        pieChart.setDrawHoleEnabled(false);
-        pieChart.setHoleRadius(80f);
-        pieChart.setData(data);
-        pieChart.setEnabled(false);
-
 
         txtBallProHome.setText(homeSta.getBallPossession()+"");
         txtBallProAway.setText(awaySta.getBallPossession()+"");
@@ -102,8 +81,6 @@ public class StatisticsFragment extends Fragment {
         txtYellowAway = v.findViewById(R.id.yelloaway);
         txtRedHome = v.findViewById(R.id.redhome);
         txtRedAway = v.findViewById(R.id.redaway);
-        pieChart = (PieChart) v.findViewById(R.id.piechartBall);
-        pieChart.setUsePercentValues(true);
     }
 
 }

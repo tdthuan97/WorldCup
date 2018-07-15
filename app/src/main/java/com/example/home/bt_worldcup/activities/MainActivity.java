@@ -373,7 +373,7 @@ public class MainActivity extends AppCompatActivity {
 
                             TeamStatistics home_team_statistics = null;
                             TeamStatistics away_team_statistics = null;
-                            if(status.equals("completed")){
+                            if(status.equals("completed") ||status.equals("in progress") ){
                                 JSONObject o_home_team_statistics =  match.getJSONObject("home_team_statistics");
                                 home_team_statistics = new TeamStatistics(
                                         o_home_team_statistics.getInt("ball_possession"),

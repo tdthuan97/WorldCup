@@ -107,7 +107,7 @@ public class MatchesAdapter  extends RecyclerView.Adapter<MatchesAdapter.ItemHol
                         intent.putExtra("awayteam", (Serializable)matchesDate.get(i).getAwayTeam());
                         intent.putExtra("homePens",matchesDate.get(i).getHomeTeam().getPenalties().toString());
                         intent.putExtra("awayPens",matchesDate.get(i).getAwayTeam().getPenalties().toString());
-                        if(matchesDate.get(i).getStatus().equals("completed")) {
+                        if(matchesDate.get(i).getStatus().equals("completed") ||matchesDate.get(i).getStatus().equals("in progress") ) {
                             intent.putExtra("homeevents", (Serializable) matchesDate.get(i).getHomeTeamEvents());
                             intent.putExtra("awayevents", (Serializable) matchesDate.get(i).getAwayTeamEvents());
                             intent.putExtra("statisticshometeam", (Serializable)matchesDate.get(i).getHomeTeamStatistics());

@@ -36,14 +36,15 @@
             android:textStyle="bold"
             android:textSize="22sp"/>
 
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/piechartBall"
+        <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            >
+            android:text="%"
+            android:textSize="42sp"
+            android:gravity="center">
 
-        </com.github.mikephil.charting.charts.PieChart>
+        </TextView>
         <TextView
             android:id="@+id/ballpossessionAway"
             android:layout_width="0dp"
